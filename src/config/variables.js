@@ -1,28 +1,28 @@
-import { scale } from '../helpers/scalling'
+import { moderateScale } from '../helpers/scalling'
 import { width } from '../helpers/dimensions'
 
 export default {
-  scale: size => {
-    return scale(size)
+  moderateScale: size => {
+    return moderateScale(size)
   },
 
   /**
    * Font size
    */
   get baseFontSize() {
-    return this.scale(14)
+    return this.moderateScale(14)
   },
 
   get smallFontSize() {
-    return this.scale(12)
+    return this.moderateScale(12)
   },
 
   get mediumFontSize() {
-    return this.scale(16)
+    return this.moderateScale(16)
   },
 
   get largeFontSize() {
-    return this.scale(24)
+    return this.moderateScale(24)
   },
 
   /**
@@ -131,7 +131,7 @@ export default {
   },
 
   get gutter() {
-    return this.scale(15)
+    return this.moderateScale(15)
   },
 
   /**
@@ -148,6 +148,6 @@ export default {
 
   // Header circle
   get headerCircleSize() {
-    return this.scale(80)
+    return this.moderateScale(80)
   }
 }

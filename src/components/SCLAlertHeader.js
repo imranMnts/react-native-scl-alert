@@ -21,11 +21,11 @@ SCLAlertHeader.defaultProps = {
 
 function SCLAlertHeader(props) {
   return (
-    <View style={[styles.container, styles.headerContainerStyles]}>
+    <View style={[styles.container, props.headerContainerStyles]}>
       <View
         style={[
           styles.inner,
-          styles.headerInnerStyles,
+          props.headerInnerStyles,
           { backgroundColor: variables[`${props.theme}Background`] }
         ]}
       >
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     zIndex: 150,
     top: 0,
-    left: variables.contentWidth / 2 - variables.gutter / 2,
+    alignItems: 'center',
     borderRadius: variables.headerCircleSize,
     backgroundColor: variables.white,
     padding: 4
